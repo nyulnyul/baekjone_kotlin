@@ -1,18 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ederson"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ederson" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/walker"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/walker" />
+
+        <ImageView
+            android:id="@+id/stones"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/stones" />
+
+        <ImageView
+            android:id="@+id/dias"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dias" />
+
+        <ImageView
+            android:id="@+id/akanji"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/akanji" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/silva"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/silva" />
+
+        <ImageView
+            android:id="@+id/db"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/db" />
+
+        <ImageView
+            android:id="@+id/rodri"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rodri" />
+
+        <ImageView
+            android:id="@+id/jack"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/jack" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/haaland"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/haaland" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
