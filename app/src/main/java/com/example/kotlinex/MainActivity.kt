@@ -3,6 +3,7 @@ package com.example.kotlinex
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -12,6 +13,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private var isdouble = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-        var names = arrayOf(
+        var names = mutableListOf<String>(
             "Ederson",
             "Walker",
             "Dias",
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.randomBtnId.setOnClickListener {
             val num1 = Random.nextInt(1, 11)
-
+//
 //            for (i in 1..11){
 //                if (num1 == i){
 //                    player1.setImageResource(player[i+1])
@@ -105,5 +107,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+    }
+
+    override fun onBackPressed() {
+    if(isdouble ==true){
+        finish()
+    }
+        isdouble = true
+        Toast.makeText(this, "한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+        Handler().postDelayed(Runnable { isdouble = false }, 3000)
     }
 }

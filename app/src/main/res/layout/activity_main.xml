@@ -34,6 +34,7 @@
                 android:id="@+id/randomBtnId"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/ramche"
                 android:layout_margin="50dp"
                 android:text="뽑기"/>
         </LinearLayout>
@@ -208,6 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:fontFamily="@font/ramche"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="랜덤 선수 뽑기"
