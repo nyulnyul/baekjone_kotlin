@@ -1,14 +1,13 @@
 import java.util.Scanner
 fun main() = with(Scanner(System.`in`)) {
-    val n =nextInt()
+
     var nums = ArrayList<Int>()
 
-    for(i in 1..n){
+    for(i in 1..9){
         nums.add(nextInt())
+
     }
-    print("${nums.minOrNull()} ${nums.maxOrNull()}")
-
-
-
+    println(nums.maxOrNull())
+    print(nums.indexOf(nums.maxOrNull())+1)
 
 }
