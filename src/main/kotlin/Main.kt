@@ -1,13 +1,21 @@
-fun main(args: Array<String>) = with(System.`in`.bufferedReader()) {
-    val x = readLine().toInt()
-    val y = readLine().toInt()
+import java.util.*
 
-    when {
-        x > 0 && y > 0 -> println(1)
-        x < 0 && y > 0 -> println(2)
-        x < 0 && y < 0 -> println(3)
-        x > 0 && y < 0 -> println(4)
+fun main() = with(Scanner(System.`in`)) {
+    var h =nextInt()
+    var m = nextInt()
+    val cookingTime = nextInt()
+
+    if (m + cookingTime >= 60) {
+        val plusHour = (m + cookingTime) / 60
+        m = (m + cookingTime) % 60
+        if (h + plusHour >= 24) {
+            h = (h + plusHour) % 24
+        } else {
+            h += plusHour
+        }
+    } else {
+        m += cookingTime
     }
+
+    println("${h} ${m}")
 }
-
-
