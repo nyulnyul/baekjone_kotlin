@@ -1,15 +1,12 @@
+import java.time.LocalDateTime
+import java.time.LocalTime
 import java.util.Scanner
 fun main() = with(Scanner(System.`in`)) {
-    val n = nextInt()
+   val x = nextInt()
+    val y = nextInt()
+    val time = LocalDateTime.of(2007,x, y,0,0)
 
-    for(i in n.downTo(1)){
-        for(k in 0 until n-i){
-            print(" ")
-        }
-        for(j in 0 until i){
-            print("*")
-        }
-        println()
-    }
+    val day = time.dayOfWeek.toString()
+    println(day.substring(0,3))
 
 }
