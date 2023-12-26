@@ -1,13 +1,17 @@
 import java.util.Scanner
-
-fun main() =  with(Scanner(System.`in`)){
-    val star = "*"
-    val space = " "
-    val n = nextInt()
+fun main() = with(Scanner(System.`in`)) {
+    val n =nextInt()
+    val nums = ArrayList<Int>()
 
     for(i in 1..n){
-        print(space.repeat(n-i))
-        println(star.repeat(i))
+        nums.add(nextInt())
     }
-
+    val v = nextInt()
+    var count = 0
+    for(i in nums){
+        if(i == v){
+            count++
+        }
+    }
+    println(count)
 }
