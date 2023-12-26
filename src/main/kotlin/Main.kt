@@ -1,12 +1,12 @@
 import java.util.Scanner
 
 fun main() = with(Scanner(System.`in`)) {
-    val num = nextInt()
+    val n = nextInt()
+    var a = 0
+    for (i in 1..n) {
+       a+=i
 
-    for (i in 1..num) {
-        var A = nextInt()
-        var B = nextInt()
 
-        println("${A + B}")
     }
+    println(a)
 }
