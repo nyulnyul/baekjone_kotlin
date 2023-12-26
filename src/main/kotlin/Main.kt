@@ -1,12 +1,21 @@
 import java.util.Scanner
 
 fun main() = with(Scanner(System.`in`)) {
-    val n = nextInt()
-    var a = 0
-    for (i in 1..n) {
-       a+=i
+    val x = nextInt()
 
+    var n = nextInt()
+    var ab =0
 
+    for(i in 1..n){
+        var a = nextInt()
+        var b = nextInt()
+        ab += a*b
     }
-    println(a)
+
+    if(x == ab) println("Yes")
+    else println("No")
+
+
 }
+
+
