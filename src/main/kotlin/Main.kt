@@ -1,19 +1,28 @@
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.util.ArrayList
+
+
 import java.util.Scanner
-import kotlin.math.max
-
 fun main() = with(Scanner(System.`in`)) {
-    val a = nextInt()
-    val b = nextInt()
-    val c = nextInt()
 
-    val list : ArrayList<Int> = arrayListOf(a,b,c)
-    list.sort()
-    print(list[1])
+    var a = nextInt()
+    var b = nextInt()
 
-    }
+    val gcd = GCD(a, b)
+    val lcm = LCM(a, b, gcd)
+
+    print("$gcd\n$lcm")
+
+
+
+
+}
+
+fun GCD(a: Int, b: Int): Int {
+    if (a% b == 0) return b
+    return GCD(b, a % b)
+}
+fun LCM(a: Int, b: Int, gcd:Int): Int {
+    return (a * b) / gcd
+}
 
 
 
