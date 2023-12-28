@@ -1,32 +1,11 @@
-
-
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.util.Scanner
-fun main() = with(Scanner(System.`in`)) {
-
-    var a = nextInt()
-    var b = nextInt()
-
-    val gcd = GCD(a, b)
-    val lcm = LCM(a, b, gcd)
-
-    print("$gcd\n$lcm")
+fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
+    var n = readLine().toInt()
+    var a = readLine().split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.sorted()
 
 
-
+        println(a[0] * a.last())
 
 }
-
-fun GCD(a: Int, b: Int): Int {
-    if (a% b == 0) return b
-    return GCD(b, a % b)
-}
-fun LCM(a: Int, b: Int, gcd:Int): Int {
-    return (a * b) / gcd
-}
-
-
-
-
-
-
-
