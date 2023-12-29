@@ -1,22 +1,11 @@
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.util.Scanner
-import kotlin.math.sqrt
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
 
-   while(true){
-       val n = readLine() ?: break
-   }
-
-}
-
-fun getOne(n: Int): Int {
-    var result = 0
-    for (i in 1..n) {
-        if (i % 10 == 1) {
-            result++
-        }
+    while (true){
+        var a = readLine()
+        if(a == "0") break
+        println(if (a == a.reversed()) "yes" else "no")
     }
-    return result
 }
